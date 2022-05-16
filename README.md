@@ -148,21 +148,13 @@ Thử chọn từng launch configuration trên run menu và bấm nút thôi!
 ****Kết quả:**** Bạn có thể thấy 3 cái app với 3 tên khác nhau tương ứng với các flavor do mình đã tạo ở bước trước đó!
 
 <table width="100%">
-
   <tr>
-
     <th>iOS</th>
-
     <th>Android</th>
-
   <tr>
-
-  <td width="50%"><img src="https://github.com/vanle57/flutter-customize-run/blob/main/images/5.png"></td>
-
-  <td width="50%"><img src="https://github.com/vanle57/flutter-customize-run/blob/main/images/6.png"></td>
-
+    <td width="50%"><img src="https://github.com/vanle57/flutter-customize-run/blob/main/images/5.png"></td>
+    <td width="50%"><img src="https://github.com/vanle57/flutter-customize-run/blob/main/images/6.png"></td>
   </tr>
-
 </table>
 
 #### [Demo source code](https://github.com/vanle57/flutter-customize-run/tree/main/demo%20source%20code/demo_flavor)
