@@ -6,7 +6,7 @@ Xin chào các bạn! Bài viết hôm nay tiếp tục là một chủ đề v�
 
 ## 2. Giới thiệu bản thân
 
-Nếu các bạn đã đọc được bài viết trước của mình ở [đây]([GitHub - vanle57/flutter-flavor: Guide to flavoring a Flutter app](https://github.com/vanle57/flutter-flavor)) thì đã biết mình là ai. Còn nếu chưa (nhưng mà mình khuyên chân thành là các bạn nên đọc bài trước vì bài này có nội dung liên quan đến bài trước đó!) thì mình xin tự giới thiệu lại lần nữa. Mình là Lê Hồng Vân, là dev iOS và mới từ mày mò, tìm hiểu Flutter được nửa năm nay. Trong tương lai, mình dự định sẽ có một bài chia sẻ về quá trình tự học của mình để những ai cũng có mong muốn tự học hỏi như mình sẽ tích luỹ được chút kinh nghiệm cho quá trình tự học của bản thân. Các bạn cùng đón chờ nhé!
+Nếu các bạn đã đọc được bài viết trước của mình ở [đây](https://github.com/vanle57/flutter-flavor) thì đã biết mình là ai. Còn nếu chưa (nhưng mà mình khuyên chân thành là các bạn nên đọc bài trước vì bài này có nội dung liên quan đến bài trước đó!) thì mình xin tự giới thiệu lại lần nữa. Mình là Lê Hồng Vân, là dev iOS và mới từ mày mò, tìm hiểu Flutter được nửa năm nay. Trong tương lai, mình dự định sẽ có một bài chia sẻ về quá trình tự học của mình để những ai cũng có mong muốn tự học hỏi như mình sẽ tích luỹ được chút kinh nghiệm cho quá trình tự học của bản thân. Các bạn cùng đón chờ nhé!
 
 Follow me more:
 | [![Facebook](https://github.com/vanle57/flutter-customize-run/blob/main/images/facebook.png)](https://www.facebook.com/van.may.750/) |    [![Gmail](https://github.com/vanle57/flutter-customize-run/blob/main/images/google.png)](mailto:hongvan.571996@gmail.com) |  [![Linkedin](https://github.com/vanle57/flutter-customize-run/blob/main/images/linkedin.png)]()   |
@@ -16,7 +16,7 @@ Follow me more:
 
 - IDE:
   - VSCode version 1.67.0
-  - Android studio version 
+  - Android Studio Bumblebee version 2021.1.1 Patch 3
   - XCode version 13.3.1
 - Flutter SDK version 2.10.5
 
@@ -68,7 +68,7 @@ Follow me more:
 }
 ```
 
-Trong object `configurations` chính là các launch configuration mà các bạn có thể custom. Để mình giải thích về1 số thuộc tính của launch configuration nhé!
+Trong object `configurations` chính là các launch configuration mà các bạn có thể custom. Để mình giải thích về một số thuộc tính của launch configuration nhé!
 
 - name: (bắt buộc có) tên của launch configuration sẽ xuất hiện trong menu xổ xuống của tab Run và Debug.
   
@@ -76,7 +76,7 @@ Trong object `configurations` chính là các launch configuration mà các bạ
   
   ![3](https://github.com/vanle57/flutter-customize-run/blob/main/images/3.png)
 
-- request: (bắt buộc có) có 2 loại là launch và attach, để phân biệt giữa chúng thì các bạn đọc thêm tại [đây]([Debugging in Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations)).
+- request: (bắt buộc có) có 2 loại là launch và attach, để phân biệt giữa chúng thì các bạn đọc thêm tại [đây](https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations).
 
 - type: (bắt buộc có) loại debbuger sử dụng
 
@@ -92,7 +92,7 @@ Còn rất nhiều tham số mà bạn có thể tham khảo tại [Launch.json 
 
 > Dịch nghĩa tiêu đề ra là **Tuỳ chỉnh trình khởi chạy và gỡ rối với các môi trường của Flutter**. Nghe khá khoai nên mình xin phép giữ tiếng Anh cho tiêu đề.
 
-Về Flutter Flavors, các bạn có thể tham khảo lại bài viết trước của mình tại [link này]([GitHub - vanle57/flutter-flavor: Guide to flavoring a Flutter app](https://github.com/vanle57/flutter-flavor))
+Về Flutter Flavors, các bạn có thể tham khảo lại bài viết trước của mình tại [link này](https://github.com/vanle57/flutter-flavor)
 
 Mình sẽ define 3 launch configuration tương ứng với 3 flavor là dev, staging và product.
 
@@ -111,19 +111,19 @@ Mình sẽ define 3 launch configuration tương ứng với 3 flavor là dev, s
             // 3
             "type": "dart",
              // 4
-            "args": ["--flavor", "dev", "-v"]
+            "args": ["--flavor", "dev"]
         },
         {
             "name": "staging",
             "request": "launch",
             "type": "dart",
-            "args": ["--flavor", "staging", "-v"]
+            "args": ["--flavor", "staging"]
         },
         {
             "name": "product",
             "request": "launch",
             "type": "dart",
-            "args": ["--flavor", "product", "-v"]
+            "args": ["--flavor", "product"]
         }
     ]
 }
@@ -135,13 +135,13 @@ Mình sẽ define 3 launch configuration tương ứng với 3 flavor là dev, s
 
 - 2 và 3: *request* và *type* sẽ được giữ nguyên theo đề xuất của VS Code
 
-- 4: Chúng ta sử dụng tham số là `--flavor`  với value là các flavor tương ứng mà mình đã config ở [bài trước]([GitHub - vanle57/flutter-flavor: Guide to flavoring a Flutter app](https://github.com/vanle57/flutter-flavor)). Các bạn có thắc mắc vì sao tham số là `--flavor` không? Ở đây chúng ta sẽ **pass những argument vào câu lệnh `flutter run`**. Như hướng dẫn ở [phần thực thi]([GitHub - vanle57/flutter-flavor: Guide to flavoring a Flutter app](https://github.com/vanle57/flutter-flavor#6-th%E1%BB%B1c-thi)), câu lệnh chúng ta sẽ thực hiện khi run app Flutter với flavor là `flutter run --flavor {tên flavor tương ứng}`.
+- 4: Chúng ta sử dụng tham số là `--flavor`  với value là các flavor tương ứng mà mình đã config ở [bài trước](https://github.com/vanle57/flutter-flavor). Các bạn có thắc mắc vì sao tham số là `--flavor` không? Ở đây chúng ta sẽ **pass những argument vào câu lệnh `flutter run`**. Như hướng dẫn ở [phần thực thi](https://github.com/vanle57/flutter-flavor#6-th%E1%BB%B1c-thi), câu lệnh chúng ta sẽ thực hiện khi run app Flutter với flavor là `flutter run --flavor {tên flavor tương ứng}`.
 
 ## 7. Thực thi
 
 Tới bước này, bạn đã hoàn thành mong muốn là build được các flavor bằng nút build của IDE mà không cần chạy lệnh rồi đó!
 
-Thử chọn từng launch configuration trên run menu và bấm nút thôi!
+Thử chọn từng launch configuration trên `Run Menu` và bấm nút thôi!
 
 ![4](https://github.com/vanle57/flutter-customize-run/blob/main/images/4.png)
 
