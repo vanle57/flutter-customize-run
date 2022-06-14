@@ -167,7 +167,7 @@ Qua 2 bài viết của mình, bạn đã biết cách
 
 - Sử dụng launch configuration để custom run và debug theo ý muốn của mình.
 
-Có lẽ bạn sẽ cảm thấy còn thiếu thiếu gì đó về flavor. Chúng ta đã có những app name khác nhau, có những application id (android) hay bundle identifier (iOS) khác nhau và tương ứng với từng flavor nhưng còn những đặc trưng nhất của chúng là api url, key service thì sao? Phải làm như thế nào để định nghĩa mỗi api url riêng cho từng flavor? Vậy thì bạn cần phải xem tiếp bài viết sau của mình ở [đây](https://github.com/vanle57/flutter-method-channel). Hoặc bạn cũng có thể xem thêm cách mình ứng dụng launch configuration ở [bài này]().
+Có lẽ bạn sẽ cảm thấy còn thiếu thiếu gì đó về flavor. Chúng ta đã có những app name khác nhau, có những application id (android) hay bundle identifier (iOS) khác nhau và tương ứng với từng flavor nhưng còn những đặc trưng nhất của chúng là api url, key service thì sao? Phải làm như thế nào để định nghĩa mỗi api url riêng cho từng flavor? Vậy thì bạn cần phải xem tiếp bài viết sau của mình ở [đây](https://github.com/vanle57/flutter-method-channel). Hoặc bạn cũng có thể xem thêm cách mình ứng dụng launch configuration ở [bài này](https://github.com/vanle57/flutter-dart-define).
 
 Cảm ơn các bạn đã theo dõi và hẹn gặp lại!
 
